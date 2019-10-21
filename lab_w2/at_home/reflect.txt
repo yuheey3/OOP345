@@ -1,0 +1,25 @@
+// Name: Yuki Waka
+// Seneca Student ID:141082180
+// Seneca email: ywaka@myseneca.ca
+// Date of completion: Sep.20.2019
+//
+// I confirm that the content of this file is created by me,
+//   with the exception of the parts provided to me by my profess
+
+Q1: the reason for the significant time difference between the copy and move operations
+
+ moving allows the source to be left in a invalid state, so you can steal 
+it's resources. If a object holds a pointer to a large block of allocated memory, 
+a move can simply steal the pointer while a copy must allocate its own memory and copy the whole memory block.
+On the other hand, Copying an object means you have to copy it's contents in memory.
+
+In this workshop, I have learned how the differences between copy and move operations.
+Also It's my first time to use 'chrono' library. During this workshop, I had difficulty of making 
+duration function. I had to declear appropriate prototype and then calculate. (endT - startT)
+this one was difficult to think of it, but it was in the document that I didn't know that for a while.
+
+Quiz 2 Reflection
+What does do the pure virtual function?
+-I answerd only 2 things to make a pure virual function.
+A pure virtual function is a virtual function for which we don’t have implementation, 
+we can only declare it. A pure virtual function is declared by assigning 0 in declaration. 

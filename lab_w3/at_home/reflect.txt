@@ -1,0 +1,25 @@
+/////////////////////////////////////////////////
+//Name: Yuki Waka
+//Student# :141082180
+//Email ywaka@myseneca.ca
+//Date: Sep.30.2019
+/////////////////////////////////////////////////
+
+1.the reason for specializing the sum() member function.
+The original sum is return value() + val or val in my code.
+By specializing the sum() member function, I could control display value.
+		
+2.the reason for specializing the initial value for a summation.
+We use two different files. Two file's argument is could be different,integer or a string. 
+By specializing summation, we can make what the safe empty value is. 
+
+3.the reason for defining the class variable outside the class definition.
+Becuase it is a one Definition Rule. Each static object must be defined once.
+Class definitions usally go in header files, included in multiple sources,
+If the static object's declaration in the header were a definition, 
+there are multiple definition, also each unit that includes 
+the header, which would break the rule. So instead,we must provide exactly one definition
+outsite the class definition.
+
+4.In this workshop,I've learnd how to use template generally and how to specialize a member function of a class template.
+The hardest part was specializing member function.

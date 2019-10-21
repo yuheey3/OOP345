@@ -1,0 +1,63 @@
+// Name: Yuki Waka
+// Seneca Student ID:141082180
+// Seneca email: ywaka@myseneca.ca
+// Date of completion: Sep.13.2019
+
+1.the difference between internal and external linkage using examples from your code
+
+Internal linkage is only in scope of a translation unit.
+External linkage is that exist beyond a particular translation unit. It can accessible through the whole program,
+while internal linkage is not. I used externak linkage when I define the max size of the sthing.
+ex) extern unsigned int g_maxSize;
+
+2.what are static variables and how were they useful in this workshop.
+I was not sure about static, but I found 
+Static variables when used inside function are initialized only once, and then they hold there value 
+even through function calls. In the note, it says , Static declares a class variable. 
+I didn't use static Keyword in this workshop, but I could put static Keyword in the 'counter', because
+It was allowed to use only local variable.
+
+3.the changes that you made in upgrading your String class.
+I made String class that holds a C-style null-terminated string of up to 3 characters and
+ the class includes a one-argument constructor, a query named dispaly() and helper functions.
+
+4. In this workshop, I've got error "Debugging: Run-Time Check Failure #2 - Stack around the variable 'LoggerThread' was corrupted"
+I spent most of time to figure this problem out and it turned out, because I didn't use
+dynamic memory. when I add   'string = new char[g_maxSize];' before copy 'strcpy' strings,it worked.
+
+----------------------------------------------------------------------------------
+// Quiz 1 Reflection
+1.What max/min values signed and Unsigned can hold?
+-I answerd totally different values.
+-Signed char min is -128, max is 127.
+ Unsigned char 	min is 0, max is 255.
+
+2.Waht is the different between a Lvalue and a Rvalue?
+-I couldn't fill out the answer.
+
+-An lvalue reference. it denoted by &.
+It's declaration refers to an accessible region of memory and reference requires 
+an initializer unless it has external linkage, it a class member within a class definition
+and it is a function parameter or a function return type.
+
+-An rvalue reference. it denoted by &&.
+An rvalue reference declaration identifies an object that is less permanent, possibly temporary. 
+
+3.Why would you use a move copy constructor or a move assignment operator instead of the regular copy
+constructor or assignment operator?
+
+-I answerd they can protect their data to avoid changed.
+
+- A copy constructor takes its argument by lvalue reference and a move constructor by rvalue reference.
+The manipulation of addresses is an efficient alternative to the copying of members 
+that contain many elements.  The move operators of C++ facilitate this alternative process for 
+objects that are near the end of their lifetime. 
+
+4.How do we specify variable inference when creating a new variable?
+-I couldn't answer.
+-A C++17 compiler can infer the type of an object from a previously declared object.  
+the compiler can infer the type from the right operand of an initializer expression.  
+'auto' specifies inference. 
+
+
+
